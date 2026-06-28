@@ -1,0 +1,8 @@
+/app/cache/*
+!/app/cache/.gitkeep
+/app/logs/*
+!/app/logs/.gitkeep
+/bin/doctrine
+/bin/doctrine.php
+/vendor/
+/composer.phar

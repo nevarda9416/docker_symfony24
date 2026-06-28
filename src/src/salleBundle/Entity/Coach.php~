@@ -1,0 +1,60 @@
+<?php
+
+namespace src\salleBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Coach
+ *
+ * @ORM\Table(name="coach")
+ * @ORM\Entity
+ */
+class Coach
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_COACH", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idCoach;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NOM_C", type="string", length=20, nullable=true)
+     */
+    private $nomC;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PRENOM_C", type="string", length=20, nullable=true)
+     */
+    private $prenomC;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NUM_TEL_C", type="integer", nullable=true)
+     */
+    private $numTelC;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="SALAIRE", type="integer", nullable=true)
+     */
+    private $salaire;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="EMAIL", type="string", length=50, nullable=false)
+     */
+    private $email;
+
+
+}

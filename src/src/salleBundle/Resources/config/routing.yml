@@ -1,0 +1,3 @@
+srcsalle_homepage:
+    pattern:  /
+    defaults: { _controller: srcsalleBundle:Default:index }

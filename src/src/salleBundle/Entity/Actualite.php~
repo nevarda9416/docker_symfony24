@@ -1,0 +1,53 @@
+<?php
+
+namespace src\salleBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Actualite
+ *
+ * @ORM\Table(name="actualite")
+ * @ORM\Entity
+ */
+class Actualite
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_act", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idAct;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="TITRE", type="text", nullable=true)
+     */
+    private $titre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Image_act", type="text", nullable=true)
+     */
+    private $imageAct;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Date_act", type="text", nullable=false)
+     */
+    private $dateAct;
+
+
+}

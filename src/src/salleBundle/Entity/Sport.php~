@@ -1,0 +1,56 @@
+<?php
+
+namespace src\salleBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Sport
+ *
+ * @ORM\Table(name="sport")
+ * @ORM\Entity
+ */
+class Sport
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_SPORT", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idSport;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NOM_S", type="string", length=10, nullable=true)
+     */
+    private $nomS;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NBRE_HEURE", type="integer", nullable=true)
+     */
+    private $nbreHeure;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="Prix", type="decimal", nullable=false)
+     */
+    private $prix;
+
+    /**
+     * @var \Coach
+     *
+     * @ORM\ManyToOne(targetEntity="Coach")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ID_COACH", referencedColumnName="ID_COACH")
+     * })
+     */
+    private $idCoach;
+
+
+}

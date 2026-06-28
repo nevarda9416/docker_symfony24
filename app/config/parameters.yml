@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: mysql
+    database_port: 3306
+    database_name: symfony24
+    database_user: symfony24
+    database_password: symfony24
+    mailer_transport: gmail
+    mailer_host: smtp.gmail.com
+    mailer_user: alimtibaa2017@gmail.com
+    mailer_password: alimtibaa1993
+    locale: en
+    secret: be366ec7add6a12d488d87cb7d4be78f

@@ -1,0 +1,45 @@
+<?php
+
+namespace src\salleBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Apartient
+ *
+ * @ORM\Table(name="apartient")
+ * @ORM\Entity
+ */
+class Apartient
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_app", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idApp;
+
+    /**
+     * @var \Abonement
+     *
+     * @ORM\ManyToOne(targetEntity="Abonement")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ID_ABONEMENT", referencedColumnName="ID_ABONEMENT")
+     * })
+     */
+    private $idAbonement;
+
+    /**
+     * @var \Sport
+     *
+     * @ORM\ManyToOne(targetEntity="Sport")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ID_SPORT", referencedColumnName="ID_SPORT")
+     * })
+     */
+    private $idSport;
+
+
+}

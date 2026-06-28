@@ -1,0 +1,6 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+srcsalle:
+    resource: "@srcsalleBundle/Resources/config/routing.yml"
+    prefix:   /

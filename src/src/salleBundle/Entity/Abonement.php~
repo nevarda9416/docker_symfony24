@@ -1,0 +1,63 @@
+<?php
+
+namespace src\salleBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Abonement
+ *
+ * @ORM\Table(name="abonement")
+ * @ORM\Entity
+ */
+class Abonement
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_ABONEMENT", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idAbonement;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="TOTAL", type="decimal", nullable=true)
+     */
+    private $total;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DATE_INSCRIPTION", type="datetime", nullable=true)
+     */
+    private $dateInscription;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="DUREE", type="integer", nullable=true)
+     */
+    private $duree;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="ETATABONEMENT", type="boolean", nullable=true)
+     */
+    private $etatabonement;
+
+    /**
+     * @var \Membre
+     *
+     * @ORM\ManyToOne(targetEntity="Membre")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ID_MEMBRE", referencedColumnName="ID_MEMBRE")
+     * })
+     */
+    private $idMembre;
+
+
+}
